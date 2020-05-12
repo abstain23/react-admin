@@ -1,0 +1,30 @@
+@url=http://localhost:5000/
+
+post {{url}}login
+Content-Type: application/json
+
+{
+  "username":"admin",
+  "password":"admin"
+}
+
+###
+post {{url}}manage/user/add
+Content-Type: application/json
+
+{
+  "username":"admin34",
+  "password":"admin"
+}
+
+###
+post {{url}}manage/user/update
+Content-Type: application/json
+
+{ 
+  "_id":"5eba5b300454d50b2d391050",
+  "username":"admin22222"
+}
+
+###
+get {{url}}manage/user/list
